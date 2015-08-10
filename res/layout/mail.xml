@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.example.log.MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E14123" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:text="Email"
+            android:textColor="@android:color/white"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_menu_send" />
+
+        <ProgressBar
+            android:id="@+id/pBar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDrawable="@drawable/progress_bg"
+            android:indeterminateOnly="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/toTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:text="To:"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/et_mail_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/toTv"
+            android:background="@drawable/edittext_change"
+            android:hint="email address"
+            android:inputType="textWebEmailAddress"
+            android:lines="1"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+    </RelativeLayout>
+
+    <com.bmb.mail.LineEditText
+        android:id="@+id/email_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:minHeight="200dp"
+        android:maxHeight="400dp"
+        android:text="input email content"
+        android:textColor="@android:color/black"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        android:textColor="#E14123"
+        android:textSize="18dp"
+        android:text="Clear" />
+
+</LinearLayout>
